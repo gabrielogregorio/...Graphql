@@ -4,7 +4,7 @@ Recomendado usar uma distribuição Linux ou o Ubuntu para Windows.
 
 
 ## Como implementar a API
-1. Crie o arquivo .env dentro da pasta "src" com o seguinte texto:
+1. Crie o arquivo “.env” dentro da pasta "src" com o seguinte texto:
 ```
 module.exports = {
     password: 'senha do banco de dados mysql'
@@ -12,7 +12,9 @@ module.exports = {
 ```
 
 2. Configure o arquivo "knexfile.js" com os dados de acesso do seu banco de dados.
-3. Crie um schema no WorkBench chamado "graphql"
+3. Crie um schema no WorkBench chamado "graphql".
+> Talvez você precise rodar o seguinte comando: "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root'
+flush privileges;" para a conexão ser possível.
 4. Instale as dependências com o comando 
 ```shell
 sudo npm i
@@ -65,7 +67,6 @@ mutation {
   }
 }
 ```
-
 
 -----------
 
